@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+  //Esto se muestra en app.component.html dentro del h1 con el corchete que lo llama
 }
