@@ -1,2 +1,10 @@
 <p>heroes works!</p>
-<h2>{{hero}}</h2>
+<!--<h2>{{hero}}</h2>-->
+<h2>{{hero.name}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+
+<!--Al convertir hero en una interfaz, ahora se define en hero.ts
+se carga en heroes.component.ts en OnINIT se inicia y este fichero
+heroes.component.html que es un componente se lanza  en app.component.html que
+es el principal-->
