@@ -27,7 +27,7 @@ y además lo vemos también arriba por no borrar el ejemplo anterior.
 
 <h2>My Heroes</h2>
 <ul class="heroes">
-  <li>
+  <li *ngFor="let hero of heroes">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
