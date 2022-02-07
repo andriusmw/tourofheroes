@@ -1,0 +1,11 @@
+/*--- basic CSS for ul and li , list of heroes --------------------*/
+
+ul {
+  background-color: gray;
+}
+
+li {
+  color: blue
+}
+
+/*----  ---*/
