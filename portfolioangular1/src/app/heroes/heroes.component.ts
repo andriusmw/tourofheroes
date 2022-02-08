@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes'; //Importa la clase HEROES
-import { HeroService } from '../hero.service'; // importa el servicio Hero
+//import { HEROES } from '../mock-heroes'; //Importa la clase HEROES --> Ahora se usa el servicio
+import { HeroService } from '../hero.service'; // 1- importa el servicio Hero
 
 @Component({
   selector: 'app-heroes',
@@ -16,23 +16,23 @@ export class HeroesComponent implements OnInit {
   };
 
 
-  heroes: Hero[] = [];
+  heroes: Hero[] = []; // 2- Se cambia lo anterior por esto, es comon otro vínculo necesario en el export
 
   selectedHero?: Hero;
   onSelect(hero: Hero): void {
   this.selectedHero = hero;
          }
 
-         getHeroes(): void {
+         getHeroes(): void {  // 4- Método para recibir el servicio del constructor
           this.heroes = this.heroService.getHeroes();
         }
 
 
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) { } // 3- Se añade el servicio al constructor
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getHeroes(); //5- Se llama al método que recibe el servicio del constructor
   }
 
 

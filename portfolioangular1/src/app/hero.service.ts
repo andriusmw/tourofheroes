@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'; //importa el injectable de angular
 import { Hero } from './hero'; //Importa la clase Hero de hero.ts (el id y el nombre)
 import { HEROES } from './mock-heroes'; //Importa HEROES del mock-heroes.ts (el listado de héroes)
 
-@Injectable({
-  providedIn: 'root'
+@Injectable({  // funciona como @Component()
+  providedIn: 'root' //inyecta el servicio en el proveedor de servicios de la app, root
 })
 
 
-export class HeroService {
+export class HeroService { //Esporta el servicio
 
-  getHeroes(): Hero[] {
+  getHeroes(): Hero[] {  //método para devolver el mock-heroes
     return HEROES;
   }
 
