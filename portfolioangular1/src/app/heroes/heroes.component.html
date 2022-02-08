@@ -44,17 +44,4 @@ que borrar-->
   listado.
 
 -->
-
-<div *ngIf="selectedHero"> <!--Sin esto no va, nos da error de que no puede ir en blanco-->
-
-<h2>{{selectedHero.name | uppercase}} Details</h2>
-<div>id: {{selectedHero.id}}</div>
-<div>
-  <label for="hero-name">Hero name: </label>
-  <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-</div>
-
-<!--Aquí se muestran los detalles del héroes selecionado, el siguiente paso sería copiar
-esto en cada li para que cuando se pinche en un héroes aparezca dentro de la primera lista, sus datos
-como un desplegable-->
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
