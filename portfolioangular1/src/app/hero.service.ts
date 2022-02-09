@@ -26,4 +26,8 @@ momento se llama a messageService para pasarle el valor "fetched heroes" al mess
 del servicio MessageService ( el 1). Ahora iremos al componente del mensaje, para mostrar
 el contenido del messsage ( el contenido de 1)
 
+Al principio siempre sale fetched porque cuando carga la página, el servicio llama a getHeroes
+(simulamos que ha cargado con el mock) y luego cuando clicamos, el mensaje devuelve el id del heroe
+clickado
+
 */
