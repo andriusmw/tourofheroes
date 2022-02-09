@@ -27,7 +27,7 @@ RESULTA QUE EL EXPORT LO QUE HACE ES:
   en add message, se usará por ejemplo la variable message *2* que tendrá un valor variable y a la hora
   de hacer el push se hace push a la variable de arriba, *1 *.
 
-  Lo mismo a la hora del clear(), se limpia la variable *2* ( eso indica también el this. se refiere
-    a la de dentro del scope)
+  Lo mismo a la hora del clear(), se limpia la variable *1* ( eso indica también el this. se refiere
+    a la de FUERA del scope)
 
 -*/
