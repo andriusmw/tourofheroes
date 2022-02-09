@@ -19,3 +19,11 @@ export class HeroService { //Esporta el servicio
 
   constructor(private messageService: MessageService) { } //Se declara el servicio en el constructor
 }
+
+/*
+hemos añadido messageService aquí para poder llamarlo cuando haya un observable de Heroes, en ese
+momento se llama a messageService para pasarle el valor "fetched heroes" al message del scope principal
+del servicio MessageService ( el 1). Ahora iremos al componente del mensaje, para mostrar
+el contenido del messsage ( el contenido de 1)
+
+*/

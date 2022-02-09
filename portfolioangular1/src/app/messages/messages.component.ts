@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service'; // Añadimos el servicio messageService
 
 @Component({
   selector: 'app-messages',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public messageService: MessageService) { } // le pasamos el servicio al constrcutor
+                                                        //para poder ser llamado
   ngOnInit(): void {
   }
 
 }
+
+/*
+De aquí vamos al template html
+*/
