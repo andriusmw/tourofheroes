@@ -1,6 +1,11 @@
 <h1>{{title}}</h1>
 <!--Muestra el título que hemos puesto en app.component.ts-->
-<app-heroes></app-heroes>
+<!--<app-heroes></app-heroes>-->
 <!--Muestra el componente heroes (heroes.component.html)-->
+<nav>
+  <a routerLink="/heroes">Heroes</a> <!--Cuando click, añade /heroes a la URL y El modulo routing redireciona-->
+</nav>
+<router-outlet></router-outlet>
+<!--tells the router where to display routed views.-->
 <app-messages></app-messages>
 <!--Muestra el componente heroes (messages.component.html)-->
