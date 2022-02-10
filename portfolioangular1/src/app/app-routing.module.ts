@@ -9,7 +9,8 @@ const routes: Routes = [ //Routes le dice al Router a donde ir cuando se clickea
                                                 // se añade la ruta, el path.
 
 
-  { path: 'dashboard', component: DashboardComponent } //Añadida ruta del dashboard
+  { path: 'dashboard', component: DashboardComponent }, //Añadida ruta del dashboard
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' } //Añadida ruta por defecto
 
  ];
  /*
