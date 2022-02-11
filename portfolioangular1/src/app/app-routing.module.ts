@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component'; //Añado el import
 import { DashboardComponent } from './dashboard/dashboard.component'; //añadido el dashbord
+import { HeroDetailComponent } from './hero-detail/hero-detail.component'; //importando heroDetail
 
 const routes: Routes = [ //Routes le dice al Router a donde ir cuando se clickea.
   { path: 'heroes', component: HeroesComponent }, //Path indica lo que se añade a la URL
@@ -10,7 +11,8 @@ const routes: Routes = [ //Routes le dice al Router a donde ir cuando se clickea
 
 
   { path: 'dashboard', component: DashboardComponent }, //Añadida ruta del dashboard
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' } //Añadida ruta por defecto
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, //Añadida ruta por defecto
+  { path: 'detail/:id', component: HeroDetailComponent } //Añadida ruta de HeroDetail + el id del heroe
 
  ];
  /*
