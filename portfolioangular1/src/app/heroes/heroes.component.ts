@@ -19,7 +19,7 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = []; // 2- Se cambia lo anterior por esto, es comon otro vínculo necesario en el export
 
-  selectedHero?: Hero;
+  selectedHero?: Hero;  //Ya no se llama, lo dejo para recordarlo
 
 
 
@@ -36,7 +36,7 @@ export class HeroesComponent implements OnInit {
     this.getHeroes(); //5- Se llama al método que recibe el servicio del constructor
   }
 
-  onSelect(hero: Hero): void {
+  onSelect(hero: Hero): void { //Ya no se llama pero lo dejo para recordarlo
     this.selectedHero = hero;
     this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }

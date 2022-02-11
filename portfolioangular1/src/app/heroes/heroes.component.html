@@ -28,8 +28,9 @@ y además lo vemos también arriba por no borrar el ejemplo anterior.
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">click</button>
+    <a routerLink="/detail/{{hero.id}}"> <!--Cada elemento de la lista tiene el enlace RouterLink-->
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
 
