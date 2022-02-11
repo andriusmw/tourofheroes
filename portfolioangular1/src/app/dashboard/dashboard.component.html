@@ -2,7 +2,12 @@
 
 <h2>Top Heroes</h2>
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes">
-    {{hero.name}}
-  </a>
+  <a *ngFor="let hero of heroes"
+  routerLink="/detail/{{hero.id}}">
+  {{hero.name}}
+</a>
+
 </div>
+
+
+<!--Muestra el nombre y añade el id + /detail/ a la URL cuando se clickea-->
