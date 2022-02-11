@@ -20,8 +20,8 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void { //Declara el método getHeroes para hacer el fetchHeroes
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
-      //Esto debe de mostrar los heroes del 1 al 5
+      .subscribe(heroes => this.heroes = heroes.slice(0, 4));
+      //Esto debe de mostrar los heroes del 1 al 4
 
 
     }
