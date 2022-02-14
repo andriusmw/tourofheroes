@@ -11,6 +11,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 //añade las librerias de formularios de angular
 
+import { HttpClientModule } from '@angular/common/http';
+//Añade HttpClient para acceder a servidores
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //Luego de añadir librerias hay que poner el contenido el import aquí para cargarlo
+    FormsModule, //Luego de añadir librerias hay que poner el contenido el import aquí para cargarlo
+    HttpClientModule //1ero se añade 2nd se importa
   ],
   providers: [],
   bootstrap: [AppComponent]
