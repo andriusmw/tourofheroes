@@ -14,6 +14,10 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
 import { HttpClientModule } from '@angular/common/http';
 //Añade HttpClient para acceder a servidores
 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+//Añade la api para simular interacción con servidor
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,16 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule, //Luego de añadir librerias hay que poner el contenido el import aquí para cargarlo
-    HttpClientModule //1ero se añade 2nd se importa
+    HttpClientModule, //1ero se añade 2nd se importa
+
+    HttpClientModule,
+
+// The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+// and returns simulated server responses.
+// Remove it when a real server is ready to receive requests.
+HttpClientInMemoryWebApiModule.forRoot(
+  InMemoryDataService, { dataEncapsulation: false }
+)
   ],
   providers: [],
   bootstrap: [AppComponent]
