@@ -46,3 +46,17 @@ que borrar-->
 
 -->
 <!--<app-hero-detail [hero]="selectedHero"></app-hero-detail>-->
+
+<div>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add hero
+  </button>
+</div>
+
+<!--Crea un div con una etiqueta herno name, un input hero name. Un botón de tipo botón con clase add-button cuando se hace click
+llama al método add() y dentro le ponemos la propiedad HeroName.value lo que es decir, el valor/contenido del input y después ponemos
+a vacío el input. En el botón pone Add hero-->
