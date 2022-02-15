@@ -1,20 +1,22 @@
 <p>heroes works!</p>
-<!--<h2>{{hero}}</h2>-->
+
+<!--<h2>{{hero}}</h2>
 <h2>{{hero.name | uppercase }} Details</h2>
 <div><span>id: </span>{{hero.id}}</div>
 <div><span>name: </span>{{hero.name}}</div>
 
-<!--Al convertir hero en una interfaz, ahora se define en hero.ts
+Al convertir hero en una interfaz, ahora se define en hero.ts
 se carga en heroes.component.ts en OnINIT se inicia y este fichero
 heroes.component.html que es un componente se lanza  en app.component.html que
 es el principal-->
 
+<!--
 <div>
   <label for="name">Hero name: </label>
   <input id="name" [(ngModel)]="hero.name" placeholder="name">
 </div>
 
-<!--Añadimos ahora un two ways binding, (enlace de dos direcciones) con ng Model
+Añadimos ahora un two ways binding, (enlace de dos direcciones) con ng Model
 Para conseguir que lo que el usuario escriba en el input cambie la clase hero.name
 y a la vez para que lo que haya en hero.name se muestre en el cuadro. (y al revés)
 
@@ -51,7 +53,7 @@ que borrar-->
 
 <div>
   <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName />
+  <input style="max-width: 50%;" id="new-hero" #heroName />
 
   <!-- (click) passes input value to add() and then clears the input -->
   <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
