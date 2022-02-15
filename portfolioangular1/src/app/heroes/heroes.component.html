@@ -30,6 +30,8 @@ y además lo vemos también arriba por no borrar el ejemplo anterior.
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}"> <!--Cada elemento de la lista tiene el enlace RouterLink-->
       <span class="badge">{{hero.id}}</span> {{hero.name}}
+      <button type="button" class="delete" title="delete hero"
+  (click)="delete(hero)">x</button>
     </a>
   </li>
 </ul>
