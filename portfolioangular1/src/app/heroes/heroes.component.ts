@@ -66,5 +66,6 @@ pushes it into to the heroes list for display.
     this.heroService.deleteHero(hero.id).subscribe();
   }
   //Método para borrar
+  //borra solo los nuevos, los añadidos, pero los del array existen no. ¿?
 
 }
